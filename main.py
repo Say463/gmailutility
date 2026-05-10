@@ -20,8 +20,8 @@ for msg in messages:
     if points >= config['notifier']['threshold']:
         send_to_discord(result)
 
-    acquision.add_remove_label(msg['id'],["IMPORTANT"],["UNREAD"])
     
+
 
     
 print("チェック完了")

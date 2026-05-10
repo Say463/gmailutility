@@ -42,25 +42,6 @@ def get_message_detail(msg_id):
         result['message'] = body
 
         return result
-
-#既読にし、重要ラベルをつける。（備考　使用したい場合は私まで、スコープをreadonlyから認証しなおす必要があります）
-def add_remove_label(msg_id,addlabel,removelabel):
-    labels_mod = {
-        "removeLabelIds": removelabel,
-        "addLabelIds": addlabel,
-    }
-
-    try:
-        message_ids = (
-            service.users()
-            .messages()
-            .modify(userId='me',id=msg_id, body=labels_mod)
-            .execute()
-        )
-    except HttpError as error:
-        print(f'labeling error={error}')
-
-     
      
 
 def decode(payload):

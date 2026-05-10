@@ -39,6 +39,6 @@ def send_to_discord(result):
             return False
             
     except requests.exceptions.RequestException as e:
-        print(f"❌ Webhook通信エラー: {e}")
+        print(f"Webhook通信エラー: {e}")
         return False
     
