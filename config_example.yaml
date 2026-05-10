@@ -1,0 +1,12 @@
+
+discord:
+  webhook_url: #ここに発行されたdiscordwebhookのurlを添付してください。
+
+
+notifier:
+  threshold: #ここに設定したいメールの基準スコアを入力してください。
+  max_check: 
+
+scoring:
+
+  keywords:

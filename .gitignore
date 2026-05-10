@@ -1,0 +1,16 @@
+# OAuth認証周り
+token.json
+credentials.json
+*.json
+
+.env
+
+#yaml
+*.yaml
+!config_example.yaml
+
+TempCodeRunner.py
+
+__pycache__/
+*.pyc
+
