@@ -9,4 +9,9 @@ notifier:
 
 scoring:
 
-  keywords:
+  keywords: #ここに、重要ワードとして登録したい単語を入力してください。
+
+
+#以上、全ての入力方法は、README.mdの「yamlファイルの編集方法」を参照してください。
+
+
