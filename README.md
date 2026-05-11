@@ -2,16 +2,19 @@
 
 この機能（**Gmail-utility**）は、ユーザーのGmailアカウントから未読メールを取得し、重要度を自動的に判定してDiscordに通知する**個人利用向けツール**です。
 
+### Setting (`Credential.json`の取得)
+
+[Cloudプロジェクトの作成](https://developers.google.com/workspace/guides/create-project?hl=ja)及び[pythonクイックスタート](https://developers.google.com/workspace/gmail/api/quickstart/python?hl=ja#step_1_turn_on_the)を参照してください。
+
+
 ### Setting（Gmail）
 
-#### 1 
-このツールは初期設定が必要です。このプロジェクトファイルをダウンロードし、cmdで`quickstart.py`を実行してください。  
-```python quickstart.py```で実行できます。
-#### 2
- お手持ちのGmailにログインすると、画面が遷移するので**詳細**をクリックしてください。その後、**Gmail-Utility(安全ではないページ)に移動**をクリックしてください。  
+ 
+1. このプロジェクトファイルをダウンロードし、cmdで`quickstart.py`を実行してください。  
+
+2. お手持ちのGmailにログインすると、画面が遷移するので**詳細**をクリックしてください。その後、**Gmail-Utility(安全ではないページ)に移動**をクリックしてください。  
 （この機能は、Googleによる認証を受けていませんが、認可に向けて鋭意改良中です。プライバシーポリシーに関しては、ファイル内のPLIVACY_POLICY.mdを参照してください。）
-#### 3
- その後の遷移画面で、**続行**をクリックすると、ファイル内に`token.json`が生成されます。以上でgmail側の初期設定は完了です。
+3. その後の遷移画面で、**続行**をクリックすると、ファイル内に`token.json`が生成されます。以上でgmail側の初期設定は完了です。
 
  ## Setting (Discord & yaml file)
 
@@ -19,7 +22,7 @@
  #### 1
  通知を送ってほしいチャンネルを右クリックして、チャンネルの編集をクリックしてください。
  #### 2
- 連携サービスから新しいウェブフックを作成してください。ウェブフック情報株にある**ウェブフックURLをコピー**をクリックして、```config_example.yaml```にペーストしてください。
+ 連携サービスから新しいウェブフックを作成してください。ウェブフック情報にある**ウェブフックURLをコピー**をクリックして、```config_example.yaml```にペーストしてください。
  #### 3
  `config_example.yaml`の、`webhook_url`に取得したURLをペーストしてください。  
  `notifier`下の、`threshold`,`max_check`に半角で数字を入力してください。thresholdはキーワードの持ち点より大きく設定してください。  
