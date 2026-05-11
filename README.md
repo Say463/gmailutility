@@ -2,13 +2,13 @@
 
 この機能（**Gmail-utility**）は、ユーザーのGmailアカウントから未読メールを取得し、重要度を自動的に判定してDiscordに通知する**個人利用向けツール**です。
 
-### Setting (`Credential.json`の取得)
+## Setting (`Credential.json`の取得)
 
 [Cloudプロジェクトの作成](https://developers.google.com/workspace/guides/create-project?hl=ja)及び[pythonクイックスタート](https://developers.google.com/workspace/gmail/api/quickstart/python?hl=ja#step_1_turn_on_the)を参照してください。  
 その後ファイル内にダウンロードした`credential.json`を加えてください。
 
 
-### Setting（Gmail）
+## Setting（Gmail）
 
  
 1. このプロジェクトファイルをダウンロードし、cmdで`quickstart.py`を実行してください。  
