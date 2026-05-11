@@ -4,7 +4,8 @@
 
 ### Setting (`Credential.json`の取得)
 
-[Cloudプロジェクトの作成](https://developers.google.com/workspace/guides/create-project?hl=ja)及び[pythonクイックスタート](https://developers.google.com/workspace/gmail/api/quickstart/python?hl=ja#step_1_turn_on_the)を参照してください。
+[Cloudプロジェクトの作成](https://developers.google.com/workspace/guides/create-project?hl=ja)及び[pythonクイックスタート](https://developers.google.com/workspace/gmail/api/quickstart/python?hl=ja#step_1_turn_on_the)を参照してください。  
+その後ファイル内にダウンロードした`credential.json`を加えてください。
 
 
 ### Setting（Gmail）
@@ -19,18 +20,33 @@
  ## Setting (Discord & yaml file)
 
  ### ディスコードで新しいサーバーを立てることを推奨します。
- #### 1
- 通知を送ってほしいチャンネルを右クリックして、チャンネルの編集をクリックしてください。
- #### 2
- 連携サービスから新しいウェブフックを作成してください。ウェブフック情報にある**ウェブフックURLをコピー**をクリックして、```config_example.yaml```にペーストしてください。
- #### 3
- `config_example.yaml`の、`webhook_url`に取得したURLをペーストしてください。  
- `notifier`下の、`threshold`,`max_check`に半角で数字を入力してください。thresholdはキーワードの持ち点より大きく設定してください。  
- `scoring`下の、`keywords`にキーワードを登録してください。例えば、TISIという単語に45点の重みをつけたい場合は、`"TISI": 45`のように○○: (数字)の記法を守って入力してください。その際、インデントに注意してください。  
- 編集が終了したら、`config_example.yaml`fileを`config_yaml`に名前を変更してください。
+1. 通知を送ってほしいチャンネルを右クリックして、チャンネルの編集をクリックしてください。
+2. 連携サービスから新しいウェブフックを作成してください。ウェブフック情報にある**ウェブフックURLをコピー**をクリックして、```config_example.yaml```にペーストしてください。
+3. ```config_example.yaml```を構成してください。構成例は以下の通りです。この構成をそのままコピペしても構いません。keywordsに設定する`"○○": (数字)`は、thresholdを考慮して設定してください。  
+例えば、IT企業という言葉に10点の重みをつけたい場合は、`"IT企業: 10"`と入力してください。その際はインデントに注意してください。
+
+```yaml
+discord:
+  webhook_url: 'ここに自身で発行したwebhook-urlをペーストしてください。'
+notifier:
+  threshold: 90
+  max_check: 10
+
+scoring:
+
+  keywords:
+    "インターン": 45
+    "スカウト": 45
+    "就職": 45
+    "採用": 45
+    "人事": 45
+    "コンテスト": 15
+```
 
  ### 使用法
  以下の設定が終了したら、cmdで`main.py`を実行してください。  
- ```python main.py```で実行できます。
+ ```bash
+ python main.py
+ ```
 
  
