@@ -22,8 +22,8 @@
  連携サービスから新しいウェブフックを作成してください。ウェブフック情報株にある**ウェブフックURLをコピー**をクリックして、```config_example.yaml```にペーストしてください。
  #### 3
  `config_example.yaml`の、`webhook_url`に取得したURLをペーストしてください。  
- `notifier`下の、`threshold`,`max_check`に半角で数字を入力してください。  
- `scoring`下の、`keywords`に`"TISI": 45`のように○○: (数字)の記法を守って入力してください。その際、インデントに注意してください。  
+ `notifier`下の、`threshold`,`max_check`に半角で数字を入力してください。thresholdはキーワードの持ち点より大きく設定してください。
+ `scoring`下の、`keywords`にキーワードを登録してください。例えば、TISIという単語に45点の重みをつけたい場合は、`"TISI": 45`のように○○: (数字)の記法を守って入力してください。その際、インデントに注意してください。  
  編集が終了したら、`config_example.yaml`fileを`config_yaml`に名前を変更してください。
 
  ### 使用法
