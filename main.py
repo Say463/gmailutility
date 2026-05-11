@@ -6,9 +6,9 @@ from senddiscord import send_to_discord
 
 service = quickstart.gmail_init()
 
-messages = acquision.gmail_message_list(['INBOX'],10,query="is:unread")
-
 config = score.open_config()
+
+messages = acquision.gmail_message_list(['INBOX'],config['notifier']['max_check'],query="is:unread")
 
 
 for msg in messages:

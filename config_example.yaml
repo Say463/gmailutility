@@ -5,13 +5,13 @@ discord:
 
 notifier:
   threshold: #ここに設定したいメールの基準スコアを入力してください。
-  max_check: 
+  max_check: #ここに一度にチェックしたいメールの件数の上限を設定してください。
 
 scoring:
 
   keywords: #ここに、重要ワードとして登録したい単語を入力してください。
 
 
-#以上、全ての入力方法は、README.mdの「yamlファイルの編集方法」を参照してください。
+#以上、全ての入力方法は、README.mdの「setting(DIscord & yaml)」を参照してください。
 
 
